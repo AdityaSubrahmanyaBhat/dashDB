@@ -69,7 +69,17 @@ func main() {
 				errorHandler.HandleError(err)
 				fmt.Println(records)
 			}
-		// case 2: dbFunctions.Read("users", "Prashanth", driver);break;
+		case 2: 
+			{
+				var name string
+				fmt.Print("Enter the name of the user : ")
+				fmt.Scanln(&name)
+				if record, err := dbFunctions.Read("users", name, driver);err != nil{
+					fmt.Println(err)
+				}else{
+					fmt.Println(record[0])
+				}
+			}
 		case 4:
 			{
 				var recordName string

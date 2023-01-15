@@ -83,24 +83,33 @@ func Write(collection string, recordItem string, v interface{}, driver *d.Driver
 	return os.Rename(tmpPath, finalPath)
 }
 
-func Read(collection string, recordItem string, v interface{}, driver *d.Driver) error{
+func Read(collection string, recordItem string, driver *d.Driver) ([]string, error){
+
 	if collection == ""{
-		return fmt.Errorf("missing collection")
-	}
-	if recordItem == ""{
-		return fmt.Errorf("missing record item")
-	}
-	record := filepath.Join(driver.Dir, collection, recordItem)
-
-	if _, err := stat(record); err!= nil {
-		return err
+		return nil, fmt.Errorf("missing collection")
 	}
 
-	b, err := ioutil.ReadFile(record + ".json")
-	if err != nil{
-		return err
+	dir := filepath.Join(driver.Dir, collection)
+
+	if _, err := stat(dir); err != nil {
+		return nil, err
 	}
-	return json.Unmarshal(b, &v)
+
+	files, err := ioutil.ReadDir(dir)
+	errorHandler.HandleError(err)
+
+	var records []string
+
+	for _, file := range files{
+		if file.Name() == (strings.ToLower(recordItem)+".json"){
+			b, err := ioutil.ReadFile(filepath.Join(dir, strings.ToLower(file.Name())))
+			if err != nil{
+				return nil, err
+			}
+			records = append(records, string(b))
+		}
+	}
+	return records, nil
 }
 
 func ReadAll(collection string, driver *d.Driver) ([]string, error){
