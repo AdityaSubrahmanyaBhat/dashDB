@@ -2,7 +2,7 @@ package user
 
 import(
 	"encoding/json"
-	address "github.com/AdityaSubrahmanyaBhat/golang/dashDB/models/Address"
+	address "github.com/AdityaSubrahmanyaBhat/dashDB/models/Address"
 )
 
 type User struct{

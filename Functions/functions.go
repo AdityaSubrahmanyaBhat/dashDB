@@ -9,9 +9,9 @@ import (
 	"strings"
 	"path/filepath"
 	"github.com/jcelliott/lumber"
-	errorHandler "github.com/AdityaSubrahmanyaBhat/golang/dashDB/Error"
-	o "github.com/AdityaSubrahmanyaBhat/golang/dashDB/models/Options"
-	d "github.com/AdityaSubrahmanyaBhat/golang/dashDB/models/Driver"
+	errorHandler "github.com/AdityaSubrahmanyaBhat/dashDB/Error"
+	o "github.com/AdityaSubrahmanyaBhat/dashDB/models/Options"
+	d "github.com/AdityaSubrahmanyaBhat/dashDB/models/Driver"
 )
 
 type Functions interface{

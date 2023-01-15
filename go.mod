@@ -1,4 +1,4 @@
-module github.com/AdityaSubrahmanyaBhat/golang/dashDB
+module github.com/AdityaSubrahmanyaBhat/dashDB
 
 go 1.19
 

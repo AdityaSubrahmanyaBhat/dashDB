@@ -2,7 +2,7 @@ package error
 
 import (
 	"fmt"
-	color "github.com/AdityaSubrahmanyaBhat/golang/dashDB/Colors"
+	color "github.com/AdityaSubrahmanyaBhat/dashDB/Colors"
 )
 
 func HandleError(err error) {

@@ -1,7 +1,7 @@
 package options
 
 import (
-	logger "github.com/AdityaSubrahmanyaBhat/golang/dashDB/models/Logger"
+	logger "github.com/AdityaSubrahmanyaBhat/dashDB/models/Logger"
 )
 
 type Options struct {

@@ -9,11 +9,11 @@ import (
 	// "os/user"
 	"strings"
 
-	color "github.com/AdityaSubrahmanyaBhat/golang/dashDB/Colors"
-	errorHandler "github.com/AdityaSubrahmanyaBhat/golang/dashDB/Error"
-	dbFunctions "github.com/AdityaSubrahmanyaBhat/golang/dashDB/Functions"
-	address "github.com/AdityaSubrahmanyaBhat/golang/dashDB/models/Address"
-	u "github.com/AdityaSubrahmanyaBhat/golang/dashDB/models/User"
+	color "github.com/AdityaSubrahmanyaBhat/dashDB/Colors"
+	errorHandler "github.com/AdityaSubrahmanyaBhat/dashDB/Error"
+	dbFunctions "github.com/AdityaSubrahmanyaBhat/dashDB/Functions"
+	address "github.com/AdityaSubrahmanyaBhat/dashDB/models/Address"
+	u "github.com/AdityaSubrahmanyaBhat/dashDB/models/User"
 )
 
 func main() {
